@@ -83,7 +83,7 @@ describe("test POST /api/v1/users/login endpoint", () => {
       throw error;
     }
   });
-  test("login menggunakan email dan password -> success", async () => {
+  test("login menggunakan email dan password yang sesuai -> success", async () => {
     try {
       let result = await request(app).post("/api/v1/users/login").send({ email: "usertest1@gmail.com", password: "usertest1" });
 
